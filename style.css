@@ -134,11 +134,11 @@
 
  .shape-wave-bottom {
      bottom: 8%;
-     left: 50%;
+     left: 30%;
      width: 210px;
      height: auto;
      animation-delay: 0.5s;
-     z-index: 1; /* 數字越小越在底層 */
+     z-index: 5; /* 數字越小越在底層 */
 }
 
 .shape-blob-center {

@@ -133,9 +133,8 @@
  }
 
  .shape-wave-bottom {
-     position: absolute; /* 通常需要搭配絕對定位 */
      bottom: 8%;
-     left: 35%;
+     left: 50%;
      width: 210px;
      height: auto;
      animation-delay: 0.5s;
@@ -149,7 +148,6 @@
 }
 
 .shape-blob-center {
-     position: absolute; /* 確保有定位屬性 */
      top: 15%;
      left: 30%;
      width: 120px;

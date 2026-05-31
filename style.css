@@ -5,7 +5,7 @@
  }
 
  :root {
-     /* 採用老師標準核心色票變數 */
+     
      --color-primary-50: #FBF7F4;
      --color-primary-100: #F6F0EA;
      --color-primary-200: #EFE6DC;
@@ -15,7 +15,7 @@
      --color-neutral-700: #1A110E;
      --color-secondary-300: #E6A15C;
 
-     /* 你原本定義的變數（安全保留作為相容使用） */
+     
      --color-primary: #2B1B13;
      --color-secondary: #E6A15C;
      --color-bg-light: #FBF7F4;
@@ -133,21 +133,38 @@
  }
 
  .shape-wave-bottom {
+     position: absolute; /* 通常需要搭配絕對定位 */
      bottom: 8%;
-     left: 30%;
+     left: 35%;
      width: 210px;
      height: auto;
      animation-delay: 0.5s;
- }
+     z-index: 1; /* 數字越小越在底層 */
+}
 
- .shape-blob-center {
+/* 確保你的圖片有設定 position，z-index 才會生效 */
+.your-image-class {
+     position: relative; 
+     z-index: 2; /* 數字較大，所以會壓在波浪上面 */
+}
+
+.shape-blob-center {
+     position: absolute; /* 確保有定位屬性 */
      top: 15%;
-     left: 40%;
+     left: 30%;
      width: 120px;
      height: auto;
      animation-delay: 1s;
- }
+     
+     /* 💡 重點：加入 z-index，數字越大越在上面 */
+     z-index: 10; 
+}
 
+/* ⚠️ 注意：你的深色圖片（或區塊）也必須設定 position，層級控制才會生效 */
+.your-image-class {
+     position: relative; /* 或是 absolute */
+     z-index: 1;         /* 數字比色塊小，就會被色塊蓋住 */
+}
  .shape-flower-rc {
      top: 25%;
      right: 3px;

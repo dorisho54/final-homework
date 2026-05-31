@@ -141,12 +141,6 @@
      z-index: 1; /* 數字越小越在底層 */
 }
 
-/* 確保你的圖片有設定 position，z-index 才會生效 */
-.your-image-class {
-     position: relative; 
-     z-index: 2; /* 數字較大，所以會壓在波浪上面 */
-}
-
 .shape-blob-center {
      top: 15%;
      left: 30%;
